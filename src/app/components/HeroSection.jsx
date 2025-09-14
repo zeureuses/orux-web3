@@ -61,17 +61,17 @@ export default function HeroSection() {
     px-[24px] py-[15px] text-base font-bold leading-[19px]
     text-gray-100 md:mr-6 md:rounded-xl md:px-6 md:py-4
     md:text-[18px] md:leading-[24px] relative z-30"
-            href="/dashboard"
-            title="Click to launch app"
+            href="https://forms.fillout.com/t/skbMAxUX2bus"
+            title="Click to apply for a project"
           >
-            Launch App
+            Apply Project
           </Link>
 
           <Link
-            href="https://forms.fillout.com/t/skbMAxUX2bus"
+            href="https://oruxai.gitbook.io/documentation"
             target="_blank"
             rel="noopener noreferrer"
-            title="Click to get ECLIP"
+            title="Click to read more"
             className="flex cursor-pointer items-center rounded-[8.84px]
     border-gradient-l-purple-blue-purple gradient-border-2
     box-border px-[24px] py-[15px] text-base font-bold
@@ -79,7 +79,7 @@ export default function HeroSection() {
     md:rounded-xl md:px-6 md:py-[14px] md:text-[18px]
     md:leading-[24px] relative z-30"
           >
-            Get ORUX
+            Read More
           </Link>
         </div>
 

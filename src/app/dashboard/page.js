@@ -299,7 +299,7 @@ function DashboardContent() {
             <>
               <h2 className="mb-2 text-2xl sm:text-3xl font-bold text-white">Overview</h2>
               <p className="mb-6 sm:mb-10 text-lg sm:text-2xl text-gray-400">
-                Track all your investments in Eclipse Ecosystem in one place.
+                Track all your tokens launched on Orux Ecosystem in one place.
               </p>
 
               {/* ce pakeiceu */}
@@ -438,7 +438,7 @@ function DashboardContent() {
                     href="https://forms.fillout.com/t/skbMAxUX2bus"
                     target="_blank"
                     rel="noopener noreferrer"
-                    title="Click to get ECLIP"
+                    title="Click to get ORUX"
                     className="flex cursor-pointer items-center justify-center text-gray-100 bg-gradient-to-r from-[#7A5AFB] to-[#1E60EC] rounded-xl px-[25px] py-[13px] text-base font-bold leading-[19px]"
                   >
                     Verify

@@ -86,7 +86,7 @@ export default function Home() {
               <div>
                 <div className="mx-auto mb-2 text-center text-base font-bold leading-[18px] text-gray-100 md:mb-3 md:max-w-[700px] md:text-[36px] md:leading-[42px]">
                   Dont miss out on the next great innovations launching on
-                  Eclipse FI
+                  ORUX AI
                 </div>
                 <div className="mx-auto mb-5 max-w-[505px] text-center font-inter text-p12 leading-[14px] text-gray-200 md:mb-10 md:text-[18px] md:leading-8">
                   Stay up to date about upcoming Cosmos and L2 launches by

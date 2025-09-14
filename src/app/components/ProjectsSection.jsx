@@ -74,19 +74,6 @@ export default function ProjectsSection() {
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 py-2 md:py-3 font-bold text-white transition duration-300 hover:opacity-90 text-sm md:text-base"
               >
-                <svg
-                  className="w-4 h-4 md:w-6 md:h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M8 16l4-4-4-4m5 8V8"
-                  />
-                </svg>
                 Apply Now
               </Link>
             </div>
@@ -145,19 +132,6 @@ export default function ProjectsSection() {
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 py-2 md:py-3 font-bold text-white transition duration-300 hover:opacity-90 text-sm md:text-base"
               >
-                <svg
-                  className="w-4 h-4 md:w-5 md:h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M8 16l4-4-4-4m5 8V8"
-                  />
-                </svg>
                 Apply Now
               </Link>
             </div>
@@ -216,19 +190,6 @@ export default function ProjectsSection() {
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 py-2 md:py-3 font-bold text-white transition duration-300 hover:opacity-90 text-sm md:text-base"
               >
-                <svg
-                  className="w-4 h-4 md:w-5 md:h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M8 16l4-4-4-4m5 8V8"
-                  />
-                </svg>
                 Apply Now
               </Link>
             </div>
@@ -287,19 +248,6 @@ export default function ProjectsSection() {
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 py-2 md:py-3 font-bold text-white transition duration-300 hover:opacity-90 text-sm md:text-base"
               >
-                <svg
-                  className="w-4 h-4 md:w-5 md:h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M8 16l4-4-4-4m5 8V8"
-                  />
-                </svg>
                 Apply Now
               </Link>
             </div>

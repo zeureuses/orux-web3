@@ -22,17 +22,25 @@ export default function Footer() {
     {
       title: "FAQ",
       href: "https://oruxai.gitbook.io/documentation/tokenomics-and-rewards/faq"
+    },
+    {
+      title: "Docs",
+      href: "https://oruxai.gitbook.io/documentation"
     }
   ];
 
   const socialLinks = [
     {
-      title: "X (Twitter)",
-      href: "https://x.com/your-twitter-handle"
+      title: "Telegram", 
+      href: "http://t.me/oruxAI"
     },
     {
-      title: "Telegram", 
-      href: "https://t.me/your-telegram-channel"
+      title: "X (Twitter)",
+      href: "https://x.com/Orux_AI"
+    },
+    {
+      title: "Linktree",
+      href: "https://linktr.ee/OruxAI"
     }
   ];
 

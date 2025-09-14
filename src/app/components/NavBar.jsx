@@ -68,7 +68,7 @@ export default function Navbar() {
     <div className="flex items-center justify-end flex-1">
       <div className="flex items-center gap-3 h-full rounded-xl px-4 py-3">
         <Link
-          href="https://t.me/your-telegram-channel"
+          href="http://t.me/oruxAI"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-8 h-8 rounded-full bg-black hover:bg-gray-800 transition-colors"
@@ -78,7 +78,7 @@ export default function Navbar() {
         </Link>
 
         <Link
-          href="https://x.com/your-twitter-handle"
+          href="https://x.com/Orux_AI"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-8 h-8 rounded-full bg-black hover:bg-gray-800 transition-colors"
