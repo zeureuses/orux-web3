@@ -43,7 +43,7 @@ export default function MyBalances() {
               <div className="mt-2 block">
                 <a
                   className="gradient-link flex items-center gap-1 text-h12 font-bold"
-                  title="Click to get ECLIP"
+                  title="Click to get ORUX"
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://oruxai.gitbook.io/documentation/tokenomics-and-rewards/usdorux-token/staking"

@@ -63,7 +63,7 @@ export default function TierVotingCard() {
               </span>
             </p>
             {/* <p className="font-inter text-p12 text-dark-74">
-              ≈ 0 Cosmic Essence / darkECLIP
+              ≈ 0 Cosmic Essence / darkORUX
             </p> */}
           </div>
         </div>
