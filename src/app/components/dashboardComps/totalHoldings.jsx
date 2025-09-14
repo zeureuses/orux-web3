@@ -5,7 +5,6 @@ import { PieChart, Pie, Cell } from "recharts";
 export default function TotalHoldings() {
   const data = [
     { name: "Stake", value: 0, color: "#EE50FA" },
-    { name: "Equinox", value: 0, color: "#2460ED" },
   ];
   const total = data.reduce((acc, d) => acc + d.value, 0);
 

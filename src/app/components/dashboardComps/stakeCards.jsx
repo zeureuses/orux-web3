@@ -5,10 +5,10 @@ export default function StakeCards() {
     <div className="w-full">
       <div className="flex flex-wrap gap-4 sm:gap-6 justify-center sm:justify-between">
         {[
-          { title: 'My ECLIP Balance', value: '0.00', usd: '≈ $0 USD' },
-          { title: 'My Staked ECLIP', value: '0.00', usd: '≈ $0 USD' },
-          { title: 'My bECLIP Balance', value: '0.00', usd: '≈ $0 USD' },
-          { title: 'Avg. Staking APR', value: '3.60%', usd: '' },
+          { title: 'My ORUX Balance', value: '0.00', usd: '≈ $0 USD' },
+          { title: 'My Staked ORUX', value: '0.00', usd: '≈ $0 USD' },
+          { title: 'My bORUX Balance', value: '0.00', usd: '≈ $0 USD' },
+          { title: 'Avg. Staking APR', value: '157.4%', usd: '' },
         ].map((card, index) => (
           <div
             key={index}

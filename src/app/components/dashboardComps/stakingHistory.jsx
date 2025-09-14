@@ -18,7 +18,7 @@ export default function YourPositions() {
               }}
             >
               <p>
-                <span className="text-white">Harvest</span> <span className="text-white">0.00</span> ECLIP
+                <span className="text-white">Harvest</span> <span className="text-white">0.00</span> ORUX
               </p>
             </button>
           </div>
@@ -33,10 +33,10 @@ export default function YourPositions() {
                   Staked/Locked
                 </th>
                 <th className="h-12 px-4 text-left align-middle [&:has([role=checkbox])]:pr-0 font-medium uppercase leading-5 tracking-[0.12em] text-gray-200">
-                  Essence
+                  ORUX
                 </th>
                 <th className="h-12 px-4 text-left align-middle [&:has([role=checkbox])]:pr-0 font-medium uppercase leading-5 tracking-[0.12em] text-gray-200">
-                  Eclip Rewards
+                  ORUX Rewards
                 </th>
                 <th className="h-12 px-4 text-left align-middle [&:has([role=checkbox])]:pr-0 font-medium uppercase leading-5 tracking-[0.12em] text-gray-200">
                   APR

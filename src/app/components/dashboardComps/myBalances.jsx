@@ -6,12 +6,12 @@ export default function MyBalances() {
       </h2>
 
       <div className="scroll1 flex flex-col gap-5 md:max-h-[194px] md:overflow-hidden md:overflow-y-auto">
-        {/* ---- ECLIP ---- */}
+        {/* ---- ORUC ---- */}
         <div className="rounded-lg bg-[#27235d] text-white px-4 py-5 transition-all bg-gradient-secondaryDefault8">
           <div className="flex items-start gap-2">
             <div className="flex-shrink-0 ">
-              {/* ECLIP SVG */}
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* ORUC SVG */}
+              {/* <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="12" cy="12" r="12" fill="#7B5BFC" />
                 <circle cx="12" cy="12" r="12" fill="url(#paint0_linear_4871_1915)" />
                 <path
@@ -28,14 +28,14 @@ export default function MyBalances() {
                     <stop offset="1" stopColor="#1E60EC" />
                   </linearGradient>
                 </defs>
-              </svg>
+              </svg> */}
             </div>
 
             <div className="flex flex-col">
               <div className="flex flex-col gap-1">
                 <span className="flex items-center gap-1 text-h16 font-bold lining-nums text-semantics-white">
                   0.00
-                  <span className="font-inter text-p12 font-normal text-dark-74">ECLIP</span>
+                  <span className="font-inter text-p12 font-normal text-dark-74">ORUX</span>
                 </span>
                 <span className="font-inter text-p12 font-normal text-dark-74">≈ $0.00 USD</span>
               </div>
@@ -46,9 +46,9 @@ export default function MyBalances() {
                   title="Click to get ECLIP"
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://app.astroport.fi/swap?to=factory/neutron10sr06r3qkhn7xzpw3339wuj77hu06mzna6uht0/eclip"
+                  href="https://oruxai.gitbook.io/documentation/tokenomics-and-rewards/usdorux-token/staking"
                 >
-                  Get ECLIP
+                  Get ORUX
                   {/* arrow svg */}
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path

@@ -10,7 +10,7 @@ export default function TierVotingCard() {
             <a
               className="gradient-link flex items-center gap-1 text-h12 font-bold"
               title="Click to Stake now"
-              href="/stake"
+              href="https://oruxai.gitbook.io/documentation/tokenomics-and-rewards/usdorux-token/staking"
             >
               Click to Stake Now
               <svg
@@ -58,14 +58,13 @@ export default function TierVotingCard() {
                 {/* All inner <path>, <defs> remain unchanged */}
                 {/* … SVG paths from your original code … */}
               </svg>
-              0
               <span className="mt-1.5 font-inter text-p12 font-normal text-dark-74">
-                vxASTRO
+                0 ORUX
               </span>
             </p>
-            <p className="font-inter text-p12 text-dark-74">
+            {/* <p className="font-inter text-p12 text-dark-74">
               ≈ 0 Cosmic Essence / darkECLIP
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

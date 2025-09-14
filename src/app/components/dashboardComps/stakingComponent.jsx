@@ -34,7 +34,7 @@ const StakingComponent = () => {
     <div className="w-full h-full mt-[5rem]">
       <div className="w-full h-full flex flex-col items-center justify-center p-6 ">
         <h2 className="text-3xl font-bold text-gray-100 pb-[1rem]">Stake Now</h2>
-        <span className='text-md text-gray-400 pb-[2rem]'>Earn Cosmic Essence every day you are staked.</span>
+        <span className='text-md text-gray-400 pb-[2rem]'>Earn oPulse every day you are staked.</span>
         <div className="w-full h-full flex items-center justify-center">
           <div className="w-full rounded-[16px] p-[2px]">
             <div className="z-30">
@@ -44,7 +44,7 @@ const StakingComponent = () => {
                 <div className="w-full p-6 text-left md:w-[57%] md:p-12 flex flex-col justify-center">
                   <h2 className="mb-2 text-[24px] font-bold text-gray-100">Stake Now</h2>
                   <p className="font-inter text-sm leading-5 text-gray-200">
-                    Un-Stake any time. The longer you stake, the more Cosmic Essence you'll earn
+                    Un-Stake any time. The longer you stake, the more ORUX you'll earn
                   </p>
                   
                   <div className="my-10 h-[1px] w-full bg-slate-700"></div>
@@ -59,23 +59,23 @@ const StakingComponent = () => {
                           You will earn
                         </p>
                         <div className="mb-2 flex items-center md:mb-0 md:mr-3">
-                          <GiGalaxy className="w-7 h-7 text-purple-400" />
+                          {/* <GiGalaxy className="w-7 h-7 text-purple-400" /> */}
                           <p className="mx-1.5 font-inter text-sm font-medium leading-5 text-white">
                             {cosmicEssencePerDay.toFixed(6)}
                             <span className="font-normal text-gray-200">/day</span>
                             <br />
-                            <span className="font-normal text-gray-200">Cosmic Essence</span>
+                            <span className="font-normal text-gray-200">ORUX</span>
                           </p>
                         </div>
                       </div>
                     </div>
                     
                     <div className="flex items-center justify-end">
-                      <div className="w-6 h-6 rounded-full bg-gradient-to-r from-purple-500 to-blue-600 flex items-center justify-center">
+                      {/* <div className="w-6 h-6 rounded-full bg-gradient-to-r from-purple-500 to-blue-600 flex items-center justify-center">
                         <div className="w-4 h-4 rounded-full bg-white flex items-center justify-center">
                           <div className="w-2 h-2 rounded-full bg-slate-800"></div>
                         </div>
-                      </div>
+                      </div> */}
                       <input
                         className="ml-3 rounded-xl border-[1.2px] border-white px-4 py-2 text-base font-semibold leading-6 tracking-[0.08px] text-white bg-transparent"
                         pattern="^[0-9]+(\.[0-9]{1,5})?$"
@@ -115,10 +115,10 @@ const StakingComponent = () => {
                     No Lock Period
                   </p>
                   <p className="font-inter text-sm text-gray-200">
-                    Un-stake <span className="text-white">anytime</span> with no penalties, you will lose your Essence when{' '}
+                    Un-stake <span className="text-white">anytime</span> with no penalties, you will lose your ORUX when{' '}
                     <span className="text-white">Un-Staking</span>
                     <br />
-                    Your max <span className="text-white">Essence</span> will be reached after{' '}
+                    Your max <span className="text-white">ORUX</span> will be reached after{' '}
                     <span className="text-white">1 year</span>
                   </p>
                 </div>
@@ -129,7 +129,7 @@ const StakingComponent = () => {
                   
                   <div className="rounded-lg bg-blue-500/10 px-5 py-[22px]">
                     <div className="mb-[22px] flex items-center justify-between">
-                      <p className="font-inter text-white/80">Cosmic Essence/year</p>
+                      <p className="font-inter text-white/80">ORUX/year</p>
                       <p className="font-inter font-medium text-gray-100">
                         {cosmicEssencePerYear.toFixed(0)}
                       </p>
@@ -162,7 +162,7 @@ const StakingComponent = () => {
                       I have read all{' '}
                       <a
                         className="inline cursor-pointer font-semibold underline hover:text-purple-400 transition-colors"
-                        href="https://docs.eclipsefi.io/tokenomics-and-rewards/staking"
+                        href="https://oruxai.gitbook.io/documentation/tokenomics-and-rewards/usdorux-token/staking"
                         target="_blank"
                         rel="noreferrer"
                       >

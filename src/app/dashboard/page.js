@@ -165,19 +165,19 @@ function DashboardContent() {
                     {moreMenuOpen && (
                       <div className="absolute top-full right-0 mt-2 w-48 bg-[#0E0928]/95 backdrop-blur-sm border border-white/10 rounded-lg shadow-lg py-2">
                         <Link
-                          href="/docs"
+                          href="https://oruxai.gitbook.io/documentation"
                           className="block px-4 py-2 text-sm text-white hover:bg-white/5"
                         >
                           Documentation
                         </Link>
                         <Link
-                          href="/twitter"
+                          href="https://x.com/Orux_AI"
                           className="block px-4 py-2 text-sm text-white hover:bg-white/5"
                         >
-                          Twitter
+                          X (Twitter)
                         </Link>
                         <Link
-                          href="/telegram"
+                          href="https://t.me/OruxAI"
                           className="block px-4 py-2 text-sm text-white hover:bg-white/5"
                         >
                           Telegram
@@ -263,19 +263,19 @@ function DashboardContent() {
                 {/* Mobile More Links */}
                 <div className="flex flex-col mt-2 border-t border-white/10 pt-2">
                   <Link
-                    href="/docs"
+                    href="https://oruxai.gitbook.io/documentation"
                     className="block px-4 py-2 text-sm text-white hover:bg-white/5"
                   >
                     Documentation
                   </Link>
                   <Link
-                    href="/twitter"
+                    href="https://x.com/Orux_AI"
                     className="block px-4 py-2 text-sm text-white hover:bg-white/5"
                   >
-                    Twitter
+                    X (Twitter)
                   </Link>
                   <Link
-                    href="/telegram"
+                    href="https://t.me/OruxAI"
                     className="block px-4 py-2 text-sm text-white hover:bg-white/5"
                   >
                     Telegram
@@ -293,7 +293,7 @@ function DashboardContent() {
             <>
               <h2 className="mb-2 text-2xl sm:text-3xl font-bold text-white">Overview</h2>
               <p className="mb-6 sm:mb-10 text-lg sm:text-2xl text-gray-400">
-                Track all your investments in Eclipse Ecosystem in one place.
+                Track all your tokens launched on Orux Ecosystem in one place.
               </p>
 
               {/* ce pakeiceu */}
@@ -531,7 +531,7 @@ function DashboardContent() {
                     title="Click to get ECLIP"
                     className="flex cursor-pointer items-center justify-center text-gray-100 bg-gradient-to-r from-[#7A5AFB] to-[#1E60EC] rounded-xl px-[25px] py-[13px] text-base font-bold leading-[19px]"
                   >
-                    Verify
+                    Apply
                   </Link>
 
 
