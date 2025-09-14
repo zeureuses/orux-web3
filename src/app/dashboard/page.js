@@ -1,7 +1,7 @@
 "use client";
 
 // Connect wallet sharshalai
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState, Suspense } from "react";
 import { ethers } from "ethers";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
@@ -28,7 +28,7 @@ const DashboardIcon = () => <RiDashboardLine className="w-4 h-4" />
 const StakeIcon = () => <FaCoins className="w-4 h-4" />
 const KYCIcon = () => <MdVerifiedUser className="w-4 h-4" />
 
-export default function DashboardPage() {
+function DashboardContent() {
   const searchParams = useSearchParams();
   const [moreMenuOpen, setMoreMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("overview"); // <── controls tab view
@@ -469,5 +469,17 @@ export default function DashboardPage() {
       </main>
       <Footer></Footer>
     </>
+  );
+}
+
+export default function DashboardPage() {
+  return (
+    <Suspense fallback={
+      <div className="bg-[#060923] flex flex-col min-h-screen w-full items-center justify-center">
+        <div className="text-white text-lg">Loading...</div>
+      </div>
+    }>
+      <DashboardContent />
+    </Suspense>
   );
 }
