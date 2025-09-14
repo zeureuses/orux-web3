@@ -10,7 +10,7 @@ const CosmicTierSystem = () => {
       name: "Star Dust",
       requiredEssence: 1500,
       position: 18.67,
-      icon: <FaCheckCircle />,
+      icon: <FaCheckCircle className='text-white' />,
       description: "Lottery Sale",
       reward: "Get 1 lottery ticket that gives a chance to win up to a $50 allocation.",
       tickets: 1,
@@ -21,7 +21,7 @@ const CosmicTierSystem = () => {
       name: "Comet",
       requiredEssence: 4000,
       position: 35.34,
-      icon: <FaCheckCircle />,
+      icon: <FaCheckCircle className='text-white' />,
       description: "Lottery Sale x4",
       reward: "Get 4 lottery tickets that give a chance to win up to a $250 allocation.",
       tickets: 4,
@@ -32,7 +32,7 @@ const CosmicTierSystem = () => {
       name: "Solar System",
       requiredEssence: 5000,
       position: 52.01,
-      icon: <FaCheckCircle />,
+      icon: <FaCheckCircle className='text-white' />,
       description: "Lottery Sale x9",
       reward: "Get 9 lottery tickets that give a chance to win up to a $350 allocation.",
       tickets: 9,
@@ -43,7 +43,7 @@ const CosmicTierSystem = () => {
       name: "Constellation",
       requiredEssence: 20000,
       position: 68.68,
-      icon: <FaCheckCircle />,
+      icon: <FaCheckCircle className='text-white' />,
       description: "Guaranteed & Lottery x16",
       reward: "Get $500 guaranteed allocation and 16 lottery tickets that give a chance to win up to an additional $1,250 allocation. (Max allocation at this tier: $1,750)",
       tickets: 16,
@@ -55,7 +55,7 @@ const CosmicTierSystem = () => {
       name: "Galaxy",
       requiredEssence: 40000,
       position: 85.35,
-      icon: <FaCheckCircle />,
+      icon: <FaCheckCircle className='text-white' />,
       description: "Guaranteed x2 & Lottery x25",
       reward: "Get $1,000 guaranteed allocation and 25 lottery tickets that give a chance to win up to an additional $3,000 allocation. (Max allocation at this tier: $4,000)",
       tickets: 25,
@@ -67,7 +67,7 @@ const CosmicTierSystem = () => {
       name: "Multiverse",
       requiredEssence: 80000,
       position: 101.02,
-      icon: <FaCheckCircle />,
+      icon: <FaCheckCircle className='text-white' />,
       description: "Guaranteed x5 & Lottery x36",
       reward: "Get $2,500 guaranteed allocation and 36 lottery tickets that give a chance to win up to an additional $6,000 allocation. (Max allocation at this tier: $8,500)",
       tickets: 36,
@@ -121,7 +121,7 @@ const CosmicTierSystem = () => {
                   
                   {/* Tier Info */}
                   <div className="mt-4">
-                    <div className="text-[10px] font-medium tracking-wider text-purple-400 uppercase">
+                    <div className="text-[10px] font-medium tracking-wider text-[#7c73fd] uppercase">
                       {tier.requiredEssence.toLocaleString()}+ Essence
                     </div>
                     <div className="mt-2 text-base font-semibold text-white flex items-center gap-2">

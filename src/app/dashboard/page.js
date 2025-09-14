@@ -3,6 +3,7 @@
 // Connect wallet sharshalai
 import React, { useCallback, useEffect, useState } from "react";
 import { ethers } from "ethers";
+import Image from "next/image";
 
 import Link from "next/link";
 import MyBalances from "../components/dashboardComps/myBalances";
@@ -12,12 +13,16 @@ import WalletLoading from "../components/dashboardComps/walletLoading";
 import StakeCards from "../components/dashboardComps/stakeCards";
 import CosmicEssence from "../components/dashboardComps/cosmicEssence";
 import StakingComponent from "../components/dashboardComps/stakingComponent";
+import StakingHistory from "../components/dashboardComps/stakingHistory";
+import Footer from "../components/footer";
 
-// ▸ Replace these placeholder icons with your real SVG components
-const DashboardIcon = () => <span>📊</span>;
-const StakeIcon = () => <span>💎</span>;
-const MoreIcon = () => <span>⋯</span>;
-const WalletIcon = () => <span>��</span>;
+import { RiDashboardLine } from 'react-icons/ri';
+import { FaCoins } from 'react-icons/fa';
+import { MdVerifiedUser } from 'react-icons/md';
+
+const DashboardIcon = () => <RiDashboardLine className="w-4 h-4" />
+const StakeIcon = () => <FaCoins className="w-4 h-4" />
+const KYCIcon = () => <MdVerifiedUser className="w-4 h-4" />
 
 export default function DashboardPage() {
   const [moreMenuOpen, setMoreMenuOpen] = useState(false);
@@ -80,15 +85,22 @@ export default function DashboardPage() {
   }, [provider]);
 
   return (
+    <>
     <main className="bg-[#060923] flex flex-col min-h-screen w-full">
       {/* ======= NAVIGATION BAR ======= */}
       <div className="fixed left-0 right-0 top-0 z-50">
-        <div className="border-b border-white/10 bg-purple-900 to-transparent px-4 backdrop-blur-2xl">
+        <div className="border-b border-white/10 bg-[#1D1A46] to-transparent px-4 backdrop-blur-2xl">
           <div className="container mx-auto flex h-[72px] items-center justify-between">
             {/* Left: Logo and main navigation */}
             <div className="flex flex-row items-center gap-8">
-              <Link href="/" className="text-2xl font-bold text-white">
-                LOGO
+              <Link href="/" title="Click to go home" className="">
+                <Image
+                  src="/images/logo.png"
+                  alt="CRUX Logo"
+                  width={140}
+                  height={60}
+                  className="h-[50px] w-auto"
+                />
               </Link>
               <div className="h-[24px] w-[1px] bg-white bg-opacity-10" />
 
@@ -112,7 +124,7 @@ export default function DashboardPage() {
                       : "text-white text-opacity-70 hover:text-opacity-100 hover:bg-white/5"
                   }`}
                 >
-                  KYC
+                  <KYCIcon /> KYC
                 </button>
 
                 <button
@@ -128,13 +140,13 @@ export default function DashboardPage() {
 
                 {/* More dropdown */}
                 <div className="relative">
-                  <button
-                    type="button"
-                    onClick={() => setMoreMenuOpen(!moreMenuOpen)}
-                    className="flex items-center gap-2 rounded-full px-3 py-2 text-sm font-medium text-white text-opacity-70 hover:bg-white/5"
-                  >
-                    More <MoreIcon />
-                  </button>
+                <button
+                        type="button"
+                        onClick={() => setMoreMenuOpen(!moreMenuOpen)}
+                        className="flex items-center gap-2 rounded-full px-3 py-2 text-sm font-medium text-white text-opacity-70 hover:bg-white/5"
+                      >
+                        More
+                      </button>
                   {moreMenuOpen && (
                     <div className="absolute top-full right-0 mt-2 w-48 bg-[#0E0928]/95 backdrop-blur-sm border border-white/10 rounded-lg shadow-lg py-2">
                       <Link
@@ -157,11 +169,10 @@ export default function DashboardPage() {
 
             {/* Right: Connect Wallet */}
             <button
-              onClick={connectWallet} // Ce pakeiceu
+              onClick={connectWallet}
               disabled={connecting}
               className="inline-flex items-center gap-2 h-[48px] px-4 rounded-3xl border-[1.5px] border-[#7A5AFB] bg-black/20 text-white font-bold text-sm hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-blue-500/20"
             >
-              <WalletIcon /> {/* Ce pakeiceu */}
               {address ? "Wallet Connected" : "Connect Wallet"}
             </button>
           </div>
@@ -181,7 +192,7 @@ export default function DashboardPage() {
             {/* ce pakeiceu */}
             {address ? (
               <div className="h-[60vh] w-full">
-                <h1 className="pb-4 text-1xl font-bold text-gray-400">
+                <h1 className="pb-4 text-xl font-bold text-gray-400">
                   <span className="text-1xl font-bold text-gray-100">
                     Crypto address:
                   </span>{" "}
@@ -194,14 +205,27 @@ export default function DashboardPage() {
                 </div>
               </div>
             ) : (
-              <div className="flex flex-col h-[60vh] items-center rounded-xl bg-[#1D1A46] py-12 md:rounded-[40px]">
+              <div className="flex flex-col h-[60vh] items-center justify-center rounded-xl bg-[#1D1A46] py-12 md:rounded-[40px]">
                 {connecting ? (
                   <>
                     <WalletLoading></WalletLoading>
                   </>
                 ) : (
-                  <div className="flex flex-col items-center justify-center">
-                    <div className="w-24 h-24 rounded-full bg-[#211F52] mb-6" />
+                  <>
+                  <div className="flex flex-col items-center justify-center md:hidden">
+                    <svg width="185" height="148" viewBox="0 0 185 148" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="93" cy="74" r="62" fill="#211F52"></circle><path d="M119.436 109.021H66.5325C62.379 109.021 59 106.023 59 102.338V67.7563C59 64.0717 62.379 61.0741 66.5325 61.0741H119.436C123.589 61.0741 126.968 64.0717 126.968 67.7563V102.354C126.968 106.039 123.607 109.021 119.436 109.021Z" fill="#120C36" stroke="#98B9FF" stroke-width="2.5"></path><path d="M115.064 94.166H127.065C128.714 94.166 130.03 92.8326 130.03 91.2008V80.3049C130.03 78.6556 128.697 77.3397 127.065 77.3397H115.064C110.414 77.3397 106.642 81.112 106.642 85.7616C106.642 90.3937 110.414 94.166 115.064 94.166Z" fill="#485186" stroke="#98B9FF" stroke-width="2.5"></path><path d="M114.889 89.1085C116.75 89.1085 118.258 87.6003 118.258 85.7397C118.258 83.8792 116.75 82.371 114.889 82.371C113.029 82.371 111.521 83.8792 111.521 85.7397C111.521 87.6003 113.029 89.1085 114.889 89.1085Z" fill="#98B9FF"></path><path d="M96.9356 51.2816C95.7478 50.1008 94.1368 49.4375 92.457 49.4375C90.7773 49.4375 89.1663 50.1008 87.9785 51.2816" stroke="#98B9FF" stroke-width="2.5" stroke-linecap="round"></path><path d="M103.258 45.2246C100.393 42.3571 96.5076 40.7461 92.4564 40.7461C88.4052 40.7461 84.5199 42.3571 81.6553 45.2246" stroke="#98B9FF" stroke-width="2.5" stroke-linecap="round"></path><path d="M109.581 38.1129C105.039 33.5586 98.8794 31 92.4568 31C86.0341 31 79.8745 33.5586 75.333 38.1129" stroke="#98B9FF" stroke-width="2.5" stroke-linecap="round"></path><path d="M92.5694 80C90.5637 80 88.7836 80.9451 87.667 82.4063C88.4274 81.8517 89.3697 81.5231 90.3908 81.5231C92.9134 81.5231 94.958 83.5275 94.958 86.0001C94.958 88.4724 92.9134 90.4769 90.3908 90.4769C89.3697 90.4769 88.4274 90.1485 87.667 89.5937C88.7835 91.0546 90.5637 92 92.5694 92C95.9501 92 98.6911 89.3131 98.6911 86.0002C98.6911 82.6864 95.9501 80 92.5694 80Z" fill="white"></path><path d="M92.5694 80C90.5637 80 88.7836 80.9451 87.667 82.4063C88.4274 81.8517 89.3697 81.5231 90.3908 81.5231C92.9134 81.5231 94.958 83.5275 94.958 86.0001C94.958 88.4724 92.9134 90.4769 90.3908 90.4769C89.3697 90.4769 88.4274 90.1485 87.667 89.5937C88.7835 91.0546 90.5637 92 92.5694 92C95.9501 92 98.6911 89.3131 98.6911 86.0002C98.6911 82.6864 95.9501 80 92.5694 80Z" fill="#98B9FF"></path><path d="M89.4727 86.01C89.4727 84.6268 90.6168 83.5056 92.0274 83.5056C92.2374 83.5056 92.4414 83.5309 92.6366 83.5778C92.0379 83.0368 91.2384 82.7058 90.3596 82.7058C88.5041 82.7058 87 84.1802 87 85.9989C87 87.8174 88.5041 89.2919 90.3596 89.2919C91.2227 89.2919 92.0092 88.9729 92.6043 88.4488C92.4187 88.4908 92.2259 88.5135 92.0274 88.5135C90.6168 88.5136 89.4727 87.3931 89.4727 86.01Z" fill="white"></path><path d="M89.4727 86.01C89.4727 84.6268 90.6168 83.5056 92.0274 83.5056C92.2374 83.5056 92.4414 83.5309 92.6366 83.5778C92.0379 83.0368 91.2384 82.7058 90.3596 82.7058C88.5041 82.7058 87 84.1802 87 85.9989C87 87.8174 88.5041 89.2919 90.3596 89.2919C91.2227 89.2919 92.0092 88.9729 92.6043 88.4488C92.4187 88.4908 92.2259 88.5135 92.0274 88.5135C90.6168 88.5136 89.4727 87.3931 89.4727 86.01Z" fill="#98B9FF"></path></svg>
+                    <h2 className="mt-2 text-lg font-bold text-gray-100 text-center">
+                      Sorry, this feature is not available on mobile.
+                    </h2>
+                    <p className="mt-2 text-center text-sm w-[70%] text-gray-300">
+                      Please use a desktop computer to view your dashboard.
+                    </p>
+                  </div>
+
+                  
+                  {/* Desktop view */}
+                  <div className="hidden md:flex flex-col items-center justify-center">
+                    <svg width="185" height="148" viewBox="0 0 185 148" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="93" cy="74" r="62" fill="#211F52"></circle><path d="M119.436 109.021H66.5325C62.379 109.021 59 106.023 59 102.338V67.7563C59 64.0717 62.379 61.0741 66.5325 61.0741H119.436C123.589 61.0741 126.968 64.0717 126.968 67.7563V102.354C126.968 106.039 123.607 109.021 119.436 109.021Z" fill="#120C36" stroke="#98B9FF" stroke-width="2.5"></path><path d="M115.064 94.166H127.065C128.714 94.166 130.03 92.8326 130.03 91.2008V80.3049C130.03 78.6556 128.697 77.3397 127.065 77.3397H115.064C110.414 77.3397 106.642 81.112 106.642 85.7616C106.642 90.3937 110.414 94.166 115.064 94.166Z" fill="#485186" stroke="#98B9FF" stroke-width="2.5"></path><path d="M114.889 89.1085C116.75 89.1085 118.258 87.6003 118.258 85.7397C118.258 83.8792 116.75 82.371 114.889 82.371C113.029 82.371 111.521 83.8792 111.521 85.7397C111.521 87.6003 113.029 89.1085 114.889 89.1085Z" fill="#98B9FF"></path><path d="M96.9356 51.2816C95.7478 50.1008 94.1368 49.4375 92.457 49.4375C90.7773 49.4375 89.1663 50.1008 87.9785 51.2816" stroke="#98B9FF" stroke-width="2.5" stroke-linecap="round"></path><path d="M103.258 45.2246C100.393 42.3571 96.5076 40.7461 92.4564 40.7461C88.4052 40.7461 84.5199 42.3571 81.6553 45.2246" stroke="#98B9FF" stroke-width="2.5" stroke-linecap="round"></path><path d="M109.581 38.1129C105.039 33.5586 98.8794 31 92.4568 31C86.0341 31 79.8745 33.5586 75.333 38.1129" stroke="#98B9FF" stroke-width="2.5" stroke-linecap="round"></path><path d="M92.5694 80C90.5637 80 88.7836 80.9451 87.667 82.4063C88.4274 81.8517 89.3697 81.5231 90.3908 81.5231C92.9134 81.5231 94.958 83.5275 94.958 86.0001C94.958 88.4724 92.9134 90.4769 90.3908 90.4769C89.3697 90.4769 88.4274 90.1485 87.667 89.5937C88.7835 91.0546 90.5637 92 92.5694 92C95.9501 92 98.6911 89.3131 98.6911 86.0002C98.6911 82.6864 95.9501 80 92.5694 80Z" fill="white"></path><path d="M92.5694 80C90.5637 80 88.7836 80.9451 87.667 82.4063C88.4274 81.8517 89.3697 81.5231 90.3908 81.5231C92.9134 81.5231 94.958 83.5275 94.958 86.0001C94.958 88.4724 92.9134 90.4769 90.3908 90.4769C89.3697 90.4769 88.4274 90.1485 87.667 89.5937C88.7835 91.0546 90.5637 92 92.5694 92C95.9501 92 98.6911 89.3131 98.6911 86.0002C98.6911 82.6864 95.9501 80 92.5694 80Z" fill="#98B9FF"></path><path d="M89.4727 86.01C89.4727 84.6268 90.6168 83.5056 92.0274 83.5056C92.2374 83.5056 92.4414 83.5309 92.6366 83.5778C92.0379 83.0368 91.2384 82.7058 90.3596 82.7058C88.5041 82.7058 87 84.1802 87 85.9989C87 87.8174 88.5041 89.2919 90.3596 89.2919C91.2227 89.2919 92.0092 88.9729 92.6043 88.4488C92.4187 88.4908 92.2259 88.5135 92.0274 88.5135C90.6168 88.5136 89.4727 87.3931 89.4727 86.01Z" fill="white"></path><path d="M89.4727 86.01C89.4727 84.6268 90.6168 83.5056 92.0274 83.5056C92.2374 83.5056 92.4414 83.5309 92.6366 83.5778C92.0379 83.0368 91.2384 82.7058 90.3596 82.7058C88.5041 82.7058 87 84.1802 87 85.9989C87 87.8174 88.5041 89.2919 90.3596 89.2919C91.2227 89.2919 92.0092 88.9729 92.6043 88.4488C92.4187 88.4908 92.2259 88.5135 92.0274 88.5135C90.6168 88.5136 89.4727 87.3931 89.4727 86.01Z" fill="#98B9FF"></path></svg>
                     <h3 className="mt-2 text-2xl font-bold text-gray-100">
                       Connect your wallet
                     </h3>
@@ -216,6 +240,7 @@ export default function DashboardPage() {
                       {connecting ? "Connecting..." : "Connect wallet"}
                     </button>
                   </div>
+                  </>
                 )}
               </div>
             )}
@@ -283,18 +308,18 @@ export default function DashboardPage() {
                 </defs>
               </svg>
 
-              <h2 className="mt-7 text-center text-[28px] font-bold leading-[33px] text-gray-100">
-                Complete KYC to be considered
-              </h2>
+              <h3 className="mt-2 text-2xl font-bold text-gray-100">
+              Complete KYC to be considered
+                    </h3>
+                    <p className="mt-2 text-center text-sm text-gray-300">
+                    You must have some NTRN in your wallet to complete zk.me KYC.
+                    </p>
 
-              <p className="mt-2 px-4 text-center font-inter text-[16px] leading-5 text-semantics-white md:px-0">
-                You must have some NTRN in your wallet to complete zk.me KYC.
-              </p>
-
-              <p className="mt-2 max-w-[385px] px-4 text-center font-inter text-sm leading-5 text-gray-200 md:px-0">
-                If you have any issues with zk.me, you can try Synaps as a
+                    <p className="mt-2 text-center text-sm w-[50%] text-gray-300">
+                    If you have any issues with zk.me, you can try Synaps as a
                 backup option. Only one is required.
-              </p>
+                    </p>
+
 
               <div className="mt-10 flex flex-col items-center space-y-4">
                 <button className="flex cursor-pointer items-center justify-center text-gray-100 bg-gradient-to-r from-[#7A5AFB] to-[#1E60EC] rounded-xl px-[25px] py-[13px] text-base font-bold leading-[19px]">
@@ -311,12 +336,17 @@ export default function DashboardPage() {
             <p className="mb-10 text-2xl text-gray-400">
               Stake your tokens to earn rewards and participate in governance.
             </p>
-            <StakeCards></StakeCards>
-            <CosmicEssence></CosmicEssence>
-            <StakingComponent></StakingComponent>
+            <div className="flex flex-col gap-[2rem]">
+              <StakeCards></StakeCards>
+              <CosmicEssence></CosmicEssence>
+              <StakingComponent></StakingComponent>
+              <StakingHistory></StakingHistory>
+            </div>
           </>
         )}
       </div>
     </main>
+    <Footer></Footer>
+    </>
   );
 }
