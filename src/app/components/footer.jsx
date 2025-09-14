@@ -12,10 +12,6 @@ export default function Footer() {
       href: "https://docs.oruxai.com/general-information/key-risks"
     },
     {
-      title: "IDO Mechanics",
-      href: "https://docs.oruxai.com/oruxai-mechanics/ido-mechanics"
-    },
-    {
       title: "Staking",
       href: "https://docs.oruxai.com/tokenomics-and-rewards/usdorux-token/staking"
     },
@@ -23,10 +19,6 @@ export default function Footer() {
       title: "FAQ",
       href: "https://docs.oruxai.com/tokenomics-and-rewards/faq"
     },
-    {
-      title: "Docs",
-      href: "https://docs.oruxai.com/"
-    }
   ];
 
   const socialLinks = [
@@ -41,6 +33,10 @@ export default function Footer() {
     {
       title: "Linktree",
       href: "https://linktr.ee/OruxAI"
+    },
+    {
+      title: "Docs",
+      href: "https://docs.oruxai.com/"
     }
   ];
 
