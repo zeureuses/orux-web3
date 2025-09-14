@@ -296,10 +296,6 @@ function DashboardContent() {
                 Track all your investments in Eclipse Ecosystem in one place.
               </p>
 
-              
-
-
-
               {/* ce pakeiceu */}
               {address ? (
                 <div className="h-[60vh] w-full">
