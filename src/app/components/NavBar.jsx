@@ -51,7 +51,7 @@ export default function Navbar() {
       <Link href="/dashboard?tab=stake" className="text-sm font-medium text-gray-300 hover:text-gray-100 transition-colors">
         Stake
       </Link>
-      <Link href="/docs" className="text-sm font-medium text-gray-300 hover:text-gray-100 transition-colors">
+      <Link href="https://docs.oruxai.com/" className="text-sm font-medium text-gray-300 hover:text-gray-100 transition-colors">
         Docs
       </Link>
       <Link
@@ -150,7 +150,7 @@ export default function Navbar() {
           <Link href="/" className="block text-gray-100">Home</Link>
           <Link href="/dashboard" className="block text-gray-100">Dashboard</Link>
           <Link href="/dashboard?tab=stake" className="block text-gray-100">Stake</Link>
-          <Link href="/docs" className="block text-gray-100">Docs</Link>
+          <Link href="https://docs.oruxai.com/" className="block text-gray-100">Docs</Link>
           <Link
             href="https://forms.fillout.com/t/skbMAxUX2bus"
             className="block text-gray-100"
