@@ -9,9 +9,10 @@ export default function Navbar() {
 
   return (
     <>
+
       {/* Desktop Navbar */}
-      <nav className="hidden lg:block absolute fixed top-0 left-0 right-0 z-50 w-full h-[150px] bg-gradient-to-b from-[#0E0928] to-transparent px-4">
-        <div className="container mx-auto flex items-center pt-[25px] relative">
+      <nav className="hidden lg:block absolute fixed top-0 left-0 right-0 z-50 w-full h-[100px] bg-gradient-to-b from-[#0E0928] to-transparent px-4">
+        <div className="container mx-auto flex items-center justify-between pt-[25px] relative h-full">
           {/* Left: Logo + members */}
           <div className="flex items-center flex-1">
             <Link href="/" title="Click to go home" className="">
@@ -39,8 +40,8 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Center: Navigation links - Absolutely centered */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-6">
+          {/* Center: Navigation links - Centered relative to the flex container */}
+          <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-6 mt-2">
             <Link href="/" className="text-sm font-medium text-gray-300 hover:text-gray-100 transition-colors">
               Home
             </Link>
@@ -111,7 +112,7 @@ export default function Navbar() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500 hover:bg-blue-600 transition-colors"
               >
-                <FaTelegramPlane className="w-4 h-4 text-white" />
+                <FaTelegramPlane className="w-4 h-4 text-black" />
               </Link>
 
               <Link

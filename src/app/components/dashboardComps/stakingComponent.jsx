@@ -19,12 +19,12 @@ const StakingComponent = () => {
     }
   };
 
-  // const handleSliderChange = (e) => {
-  //   const value = parseFloat(e.target.value);
-  //   setSliderValue(value);
-  //   const calculatedAmount = (maxStakeAmount * value / 100).toFixed(6);
-  //   setStakeAmount(calculatedAmount);
-  // };
+  const handleSliderChange = (e) => {
+    const value = parseFloat(e.target.value);
+    setSliderValue(value);
+    const calculatedAmount = (maxStakeAmount * value / 100).toFixed(6);
+    setStakeAmount(calculatedAmount);
+  };
 
   const cosmicEssencePerDay = 0.000000;
   const cosmicEssencePerYear = cosmicEssencePerDay * 365;
@@ -80,8 +80,8 @@ const StakingComponent = () => {
                         className="ml-3 rounded-xl border-[1.2px] border-white px-4 py-2 text-base font-semibold leading-6 tracking-[0.08px] text-white bg-transparent"
                         pattern="^[0-9]+(\.[0-9]{1,5})?$"
                         type="text"
-                        value={stakeAmount}
-                        // onChange={handleStakeAmountChange}
+                        value="0"
+                        readOnly
                         style={{ width: '80px' }}
                         placeholder="0"
                       />
@@ -95,11 +95,11 @@ const StakingComponent = () => {
                         min="0"
                         max="100"
                         step="0.01"
-                        value={sliderValue}
-                        // onChange={handleSliderChange}
-                        className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer slider"
+                        value="0"
+                        readOnly
+                        className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-not-allowed slider"
                         style={{
-                          background: `linear-gradient(to right, #7c3aed 0%, #7c3aed ${sliderValue}%, #374151 ${sliderValue}%, #374151 100%)`
+                          background: `linear-gradient(to right, #7c3aed 0%, #7c3aed 0%, #374151 0%, #374151 100%)`
                         }}
                       />
                     </div>
@@ -172,12 +172,8 @@ const StakingComponent = () => {
                   </div>
                   
                   <button
-                    className={`mt-7 w-full rounded-lg px-8 py-5 text-center text-[18px] font-bold leading-6 text-white transition-all ${
-                      isAgreed && parseFloat(stakeAmount) > 0
-                        ? 'bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 cursor-pointer'
-                        : 'bg-slate-600 cursor-not-allowed'
-                    }`}
-                    disabled={!isAgreed || parseFloat(stakeAmount) <= 0}
+                    className="mt-7 w-full rounded-lg px-8 py-5 text-center text-[18px] font-bold leading-6 text-white bg-slate-600 cursor-not-allowed transition-all"
+                    disabled={true}
                   >
                     Stake
                   </button>
@@ -194,8 +190,8 @@ const StakingComponent = () => {
           width: 20px;
           height: 20px;
           border-radius: 50%;
-          background: linear-gradient(135deg, #7c3aed, #2563eb);
-          cursor: pointer;
+          background: #6b7280;
+          cursor: not-allowed;
           border: 2px solid white;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
@@ -204,8 +200,8 @@ const StakingComponent = () => {
           width: 20px;
           height: 20px;
           border-radius: 50%;
-          background: linear-gradient(135deg, #7c3aed, #2563eb);
-          cursor: pointer;
+          background: #6b7280;
+          cursor: not-allowed;
           border: 2px solid white;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
@@ -214,4 +210,4 @@ const StakingComponent = () => {
   );
 };
 
-export default StakingComponent;
+export default StakingComponent
