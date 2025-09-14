@@ -4,11 +4,14 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { ethers } from "ethers";
 
-
 import Link from "next/link";
 import MyBalances from "../components/dashboardComps/myBalances";
 import TierVotingCard from "../components/dashboardComps/tierVotingCard";
 import TotalHoldings from "../components/dashboardComps/totalHoldings";
+import WalletLoading from "../components/dashboardComps/walletLoading";
+import StakeCards from "../components/dashboardComps/stakeCards";
+import CosmicEssence from "../components/dashboardComps/cosmicEssence";
+import StakingComponent from "../components/dashboardComps/stakingComponent";
 
 // ▸ Replace these placeholder icons with your real SVG components
 const DashboardIcon = () => <span>📊</span>;
@@ -76,13 +79,11 @@ export default function DashboardPage() {
     }
   }, [provider]);
 
-
-
   return (
     <main className="bg-[#060923] flex flex-col min-h-screen w-full">
       {/* ======= NAVIGATION BAR ======= */}
       <div className="fixed left-0 right-0 top-0 z-50">
-        <div className="border-b border-white/10 bg-gradient-to-b from-[#0E0928] to-transparent px-4 backdrop-blur-2xl">
+        <div className="border-b border-white/10 bg-purple-900 to-transparent px-4 backdrop-blur-2xl">
           <div className="container mx-auto flex h-[72px] items-center justify-between">
             {/* Left: Logo and main navigation */}
             <div className="flex flex-row items-center gap-8">
@@ -125,7 +126,6 @@ export default function DashboardPage() {
                   <StakeIcon /> Stake
                 </button>
 
-
                 {/* More dropdown */}
                 <div className="relative">
                   <button
@@ -157,13 +157,12 @@ export default function DashboardPage() {
 
             {/* Right: Connect Wallet */}
             <button
-              onClick={connectWallet}  // Ce pakeiceu
+              onClick={connectWallet} // Ce pakeiceu
               disabled={connecting}
               className="inline-flex items-center gap-2 h-[48px] px-4 rounded-3xl border-[1.5px] border-[#7A5AFB] bg-black/20 text-white font-bold text-sm hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-blue-500/20"
             >
-              <WalletIcon />{" "} 
-              {/* Ce pakeiceu */}
-              {address ? "Wallet Connected" : "Connect Wallet"} 
+              <WalletIcon /> {/* Ce pakeiceu */}
+              {address ? "Wallet Connected" : "Connect Wallet"}
             </button>
           </div>
         </div>
@@ -174,41 +173,57 @@ export default function DashboardPage() {
         {activeTab === "overview" && (
           <>
             <h2 className="mb-2 text-3xl font-bold text-white">Overview</h2>
-            <h1>{address ? address : ""}</h1>
+
             <p className="mb-10 text-2xl text-gray-400">
               Track all your investments in Eclipse Ecosystem in one place.
             </p>
 
             {/* ce pakeiceu */}
             {address ? (
-              <div className="mb-14 bg-[#1D1A46] flex flex-col gap-8 md:grid md:grid-cols-12 md:items-start">
-                <TotalHoldings />
-                <TierVotingCard />
-                <MyBalances />
+              <div className="h-[60vh] w-full">
+                <h1 className="pb-4 text-1xl font-bold text-gray-400">
+                  <span className="text-1xl font-bold text-gray-100">
+                    Crypto address:
+                  </span>{" "}
+                  {address ? address : ""}
+                </h1>
+                <div className="mb-14 flex flex-col gap-8 md:grid md:grid-cols-12 md:items-start">
+                  <TotalHoldings />
+                  <TierVotingCard />
+                  <MyBalances />
+                </div>
               </div>
             ) : (
-              <div className="flex flex-col items-center rounded-xl bg-[#1D1A46] py-12 md:rounded-[40px]">
-                <div className="w-24 h-24 rounded-full bg-[#211F52] mb-6" />
-                <h3 className="mt-2 text-2xl font-bold text-gray-100">
-                  Connect your wallet
-                </h3>
-                <p className="mt-2 text-center text-sm text-gray-300">
-                  Please connect your wallet to view your dashboard.
-                </p>
-                <button
-                  onClick={connectWallet}
-                  disabled={connecting}
-                  className="mt-6 rounded-xl bg-gradient-to-r from-[#7A5AFB] to-[#1E60EC] px-6 py-3 font-bold text-white"
-                >
-                  {connecting ? "Connecting..." : "Connect wallet"}
-                </button>
+              <div className="flex flex-col h-[60vh] items-center rounded-xl bg-[#1D1A46] py-12 md:rounded-[40px]">
+                {connecting ? (
+                  <>
+                    <WalletLoading></WalletLoading>
+                  </>
+                ) : (
+                  <div className="flex flex-col items-center justify-center">
+                    <div className="w-24 h-24 rounded-full bg-[#211F52] mb-6" />
+                    <h3 className="mt-2 text-2xl font-bold text-gray-100">
+                      Connect your wallet
+                    </h3>
+                    <p className="mt-2 text-center text-sm text-gray-300">
+                      Please connect your wallet to view your dashboard.
+                    </p>
+                    <button
+                      onClick={connectWallet}
+                      disabled={connecting}
+                      className="mt-6 rounded-xl bg-gradient-to-r from-[#7A5AFB] to-[#1E60EC] px-6 py-3 font-bold text-white"
+                    >
+                      {connecting ? "Connecting..." : "Connect wallet"}
+                    </button>
+                  </div>
+                )}
               </div>
             )}
           </>
         )}
 
         {activeTab === "kyc" && (
-          <>
+          <div className="h-[60vh] w-full ">
             <h2 className="mb-2 text-3xl font-bold text-white">KYC</h2>
             <p className="mb-10 text-2xl text-gray-400">
               Verify your identity to participate in the ecosystem.
@@ -275,17 +290,7 @@ export default function DashboardPage() {
               <p className="mt-2 px-4 text-center font-inter text-[16px] leading-5 text-semantics-white md:px-0">
                 You must have some NTRN in your wallet to complete zk.me KYC.
               </p>
-              <p className="mt-2 max-w-[385px] px-4 text-center font-inter text-sm leading-5 text-gray-200 md:px-0">
-                Whitelist applications require basic KYC to be submitted.
-              </p>
-              <p className="mt-2 max-w-[385px] px-4 text-center font-inter text-sm leading-5 text-gray-200 md:px-0">
-                If you have already done a zk.me KYC before on another platform
-                then you just need to sign a transaction.
-              </p>
-              <p className="mt-2 max-w-[385px] px-4 text-center font-inter text-sm leading-5 text-gray-200 md:px-0">
-                If not, it'll only take ~2 mins and you'll never need to do it
-                again, anywhere.
-              </p>
+
               <p className="mt-2 max-w-[385px] px-4 text-center font-inter text-sm leading-5 text-gray-200 md:px-0">
                 If you have any issues with zk.me, you can try Synaps as a
                 backup option. Only one is required.
@@ -295,12 +300,9 @@ export default function DashboardPage() {
                 <button className="flex cursor-pointer items-center justify-center text-gray-100 bg-gradient-to-r from-[#7A5AFB] to-[#1E60EC] rounded-xl px-[25px] py-[13px] text-base font-bold leading-[19px]">
                   KYC through zk.me
                 </button>
-                <button className="flex cursor-pointer items-center justify-center text-gray-100 bg-gradient-to-r from-[#7A5AFB] to-[#1E60EC] rounded-xl px-[20px] py-[13px] text-base font-bold leading-[19px]">
-                  KYC through Synaps
-                </button>
               </div>
             </div>
-          </>
+          </div>
         )}
 
         {activeTab === "stake" && (
@@ -309,15 +311,9 @@ export default function DashboardPage() {
             <p className="mb-10 text-2xl text-gray-400">
               Stake your tokens to earn rewards and participate in governance.
             </p>
-            <div className="flex flex-col items-center rounded-xl bg-[#1D1A46] py-12 md:rounded-[40px]">
-              <div className="w-24 h-24 rounded-full bg-[#211F52] mb-6" />
-              <h3 className="mt-2 text-2xl font-bold text-gray-100">
-                Stake Coming Soon
-              </h3>
-              <p className="mt-2 text-center text-sm text-gray-300">
-                Staking functionality will be available soon.
-              </p>
-            </div>
+            <StakeCards></StakeCards>
+            <CosmicEssence></CosmicEssence>
+            <StakingComponent></StakingComponent>
           </>
         )}
       </div>

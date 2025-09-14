@@ -10,7 +10,7 @@ export default function TotalHoldings() {
   const total = data.reduce((acc, d) => acc + d.value, 0);
 
   return (
-    <div className="col-span-5 rounded-2xl bg-blue-600 p-6">
+    <div className="col-span-5 rounded-2xl bg-[#1D1A46] p-6">
       <h2 className="mb-8 text-xl font-bold text-white">Total Holdings</h2>
 
       <div className="mb-6 flex flex-col items-center justify-center gap-11 md:flex-row">
