@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import AnimatedDiv from "./AnimatedDiv";
+import Link from "next/link";
 
 
 export default function HeroSection() {
@@ -9,7 +10,7 @@ export default function HeroSection() {
 
 
   const handleScroll = () => {
-    const scrollY = window.scrollY; 
+    const scrollY = window.scrollY;
     const rotateValue = scrollY * 0.1;
     setRotation(rotateValue);
   };
@@ -53,39 +54,35 @@ export default function HeroSection() {
           We are a modular, multi-chain launch protocol building a pioneering toolkit that aligns long-term users with projects. By leveraging smart accounts and cross-chain architecture, we make onboarding and cross-chain launches seamless and intuitive.
         </p>
 
-        <div className="mt-10 flex justify-center md:mt-12">
-          <a href="/launchpad" title="Click to launch app">
-            <button
-              type="button"
-              className="mr-[13px] flex cursor-pointer items-center justify-center
-                        rounded-[8.84px] bg-gradient-to-r from-[#7A5AFB] to-[#1E60EC]
-                        px-[24px] py-[15px] text-base font-bold leading-[19px]
-                        text-gray-100 md:mr-6 md:rounded-xl md:px-6 md:py-4
-                        md:text-[18px] md:leading-[24px]"
-            >
-              Launch App
-            </button>
-          </a>
+        <div className="mt-10 flex flex-row justify-center md:mt-12 relative z-20">
+          <Link
+            className="mr-[13px] flex cursor-pointer items-center justify-center
+    rounded-[8.84px] bg-gradient-to-r from-[#7A5AFB] to-[#1E60EC]
+    px-[24px] py-[15px] text-base font-bold leading-[19px]
+    text-gray-100 md:mr-6 md:rounded-xl md:px-6 md:py-4
+    md:text-[18px] md:leading-[24px] relative z-30"
+            href="/dashboard"
+            title="Click to launch app"
+          >
+            Launch App
+          </Link>
 
-          <a
-            href="https://app.astroport.fi/swap?to=factory/neutron10sr06r3qkhn7xzpw3339wuj77hu06mzna6uht0/eclip"
+          <Link
+            href="https://forms.fillout.com/t/skbMAxUX2bus"
             target="_blank"
             rel="noopener noreferrer"
             title="Click to get ECLIP"
+            className="flex cursor-pointer items-center rounded-[8.84px]
+    border-gradient-l-purple-blue-purple gradient-border-2
+    box-border px-[24px] py-[15px] text-base font-bold
+    leading-[19px] text-gray-100
+    md:rounded-xl md:px-6 md:py-[14px] md:text-[18px]
+    md:leading-[24px] relative z-30"
           >
-            <button
-              type="button"
-              className="flex cursor-pointer items-center rounded-[8.84px]
-                        border-gradient-l-purple-blue-purple gradient-border-2
-                        box-border px-[24px] py-[15px] text-base font-bold
-                        leading-[19px] text-gray-100
-                        md:rounded-xl md:px-6 md:py-[14px] md:text-[18px]
-                        md:leading-[24px]"
-            >
-              Get ORUX
-            </button>
-          </a>
+            Get ORUX
+          </Link>
         </div>
+
       </AnimatedDiv>
 
       <div className="absolute bottom-[-40px] left-0 hidden h-[100px] w-full bg-black blur-[42px] md:block"></div>

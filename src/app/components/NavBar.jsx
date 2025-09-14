@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { FaTelegramPlane } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -9,9 +11,9 @@ export default function Navbar() {
     <>
       {/* Desktop Navbar */}
       <nav className="hidden lg:block absolute fixed top-0 left-0 right-0 z-50 w-full h-[150px] bg-gradient-to-b from-[#0E0928] to-transparent px-4">
-        <div className="container mx-auto flex items-center justify-between pt-[25px]">
+        <div className="container mx-auto flex items-center pt-[25px] relative">
           {/* Left: Logo + members */}
-          <div className="flex items-center">
+          <div className="flex items-center flex-1">
             <Link href="/" title="Click to go home" className="">
               <Image
                 src="/images/logo.png"
@@ -37,32 +39,54 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Center: Navigation links */}
-          <div className="flex items-center gap-6">
-            <Link href="/" className="text-sm font-medium text-gray-300 hover:text-gray-100">Home</Link>
-            <Link href="/dashboard" className="text-sm font-medium text-gray-300 hover:text-gray-100">Dashboard</Link>
-            <Link href="/launchpad" className="text-sm font-medium text-gray-300 hover:text-gray-100">Launchpad</Link>
-            <Link href="/stake" className="text-sm font-medium text-gray-300 hover:text-gray-100">Stake</Link>
-            <a href="https://equinox.eclipsefi.io/" className="text-sm font-medium text-gray-300 hover:text-gray-100">Equinox</a>
-            <a
+          {/* Center: Navigation links - Absolutely centered */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-6">
+            <Link href="/" className="text-sm font-medium text-gray-300 hover:text-gray-100 transition-colors">
+              Home
+            </Link>
+            <Link href="/dashboard?tab=overview" className="text-sm font-medium text-gray-300 hover:text-gray-100 transition-colors">
+              Dashboard
+            </Link>
+            <Link href="/dashboard?tab=stake" className="text-sm font-medium text-gray-300 hover:text-gray-100 transition-colors">
+              Stake
+            </Link>
+            <Link href="/docs" className="text-sm font-medium text-gray-300 hover:text-gray-100 transition-colors">
+              Docs
+            </Link>
+            <Link
               target="_blank"
               rel="noopener noreferrer"
-              href="https://airtable.com/appocm8m9oZWPJv0t/pagBaVi0C6GsDZ6o5/form"
-              className="flex items-center gap-1 bg-gradient-to-r from-[#846BEA] to-[#5882DA] bg-clip-text text-sm font-semibold text-transparent"
+              href="https://forms.fillout.com/t/skbMAxUX2bus"
+              className="flex items-center gap-1 bg-gradient-to-r from-[#846BEA] to-[#5882DA] bg-clip-text text-sm font-semibold text-transparent hover:opacity-80 transition-opacity"
             >
               Apply For IDO
-            </a>
+            </Link>
           </div>
 
-          {/* Right: Launch button */}
-          <button
-            type="button"
-            className="relative inline-flex w-28 items-center justify-center rounded-xl bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 p-[2px]"
-          >
-            <span className="w-full bg-[#060923] h-full rounded-xl text-sm font-bold leading-[16px] text-gray-100 py-3 flex items-center justify-center">
-              Launch App
-            </span>
-          </button>
+          {/* Right: Social links */}
+          <div className="flex items-center justify-end flex-1">
+            <div className="flex items-center gap-3 h-full rounded-xl px-4 py-3">
+              <Link
+                href="https://t.me/your-telegram-channel"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500 hover:bg-blue-600 transition-colors"
+                aria-label="Visit our Telegram channel"
+              >
+                <FaTelegramPlane className="w-4 h-4 text-white" />
+              </Link>
+
+              <Link
+                href="https://x.com/your-twitter-handle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-8 h-8 rounded-full bg-black hover:bg-gray-800 transition-colors"
+                aria-label="Visit our X (Twitter) profile"
+              >
+                <BsTwitterX className="w-4 h-4 text-white" />
+              </Link>
+            </div>
+          </div>
         </div>
       </nav>
 
@@ -79,12 +103,27 @@ export default function Navbar() {
         </Link>
 
         <div className="flex items-center gap-2">
-          <button
-            title="Connect Wallet"
-            className="inline-flex h-12 items-center gap-2 rounded-3xl border border-purple-500 bg-black/40 px-3 font-bold text-sm text-white transition-colors hover:bg-gradient-to-r hover:from-purple-500 hover:to-indigo-500 active:text-transparent active:bg-clip-text"
-          >
-            Connect Wallet
-          </button>
+          <div className="relative inline-flex items-center gap-3">
+            <div className="flex items-center gap-3 h-full rounded-xl px-4 py-3">
+              <Link
+                href="https://t.me/your-telegram-channel"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500 hover:bg-blue-600 transition-colors"
+              >
+                <FaTelegramPlane className="w-4 h-4 text-white" />
+              </Link>
+
+              <Link
+                href="https://x.com/your-twitter-handle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-8 h-8 rounded-full bg-black hover:bg-gray-800 transition-colors"
+              >
+                <BsTwitterX className="w-4 h-4 text-white" />
+              </Link>
+            </div>
+          </div>
 
           {/* Hamburger menu toggler */}
           <button
@@ -109,15 +148,14 @@ export default function Navbar() {
         <div className="lg:hidden fixed top-16 inset-x-0 z-40 bg-[#0E0928] p-4 space-y-4">
           <Link href="/" className="block text-gray-100">Home</Link>
           <Link href="/dashboard" className="block text-gray-100">Dashboard</Link>
-          <Link href="/launchpad" className="block text-gray-100">Launchpad</Link>
-          <Link href="/stake" className="block text-gray-100">Stake</Link>
-          <a href="https://equinox.eclipsefi.io/" className="block text-gray-100">Equinox</a>
-          <a
-            href="https://airtable.com/appocm8m9oZWPJv0t/pagBaVi0C6GsDZ6o5/form"
+          <Link href="/dashboard?tab=stake" className="block text-gray-100">Stake</Link>
+          <Link href="/docs" className="block text-gray-100">Docs</Link>
+          <Link
+            href="https://forms.fillout.com/t/skbMAxUX2bus"
             className="block text-gray-100"
           >
             Apply For IDO
-          </a>
+          </Link>
         </div>
       )}
     </>

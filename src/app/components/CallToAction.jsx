@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 
 export default function CTAsection() {
@@ -13,10 +14,10 @@ export default function CTAsection() {
           <div className="mb-5 max-w-[255px] text-center font-inter text-[12px] leading-[18px] text-gray-200 md:mb-10 md:max-w-[650px] md:text-[18px] md:leading-8">
             Submit your project and token for launch through theOrux AI protocol, or share an early expression of interest today.
           </div>
-          <a
+          <Link
             target="_blank"
             rel="noopener noreferrer"
-            href="https://airtable.com/appocm8m9oZWPJv0t/pagBaVi0C6GsDZ6o5/form"
+            href="https://forms.fillout.com/t/skbMAxUX2bus"
           >
             <button
               className="flex cursor-pointer items-center justify-center text-gray-100 bg-gradient-to-r from-[#7A5AFB] to-[#1E60EC] rounded-[8.84px] px-[10px] py-[6px] text-sm font-bold leading-[19px] md:rounded-xl md:px-6 md:py-4 md:text-[18px] md:leading-[24px] hover:opacity-90 transition-opacity duration-300"
@@ -24,7 +25,7 @@ export default function CTAsection() {
             >
               Apply Now
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

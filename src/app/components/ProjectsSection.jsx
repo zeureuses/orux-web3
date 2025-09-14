@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import bb from "/public/images/era.jpg";
 import AnimatedDiv from "./AnimatedDiv";
+import Link from "next/link";
 
 export default function ProjectsSection() {
   return (
@@ -16,32 +17,7 @@ export default function ProjectsSection() {
               Launch your project on our platforms and benefit from our solutions
             </p>
           </div>
-          <div className="flex items-center justify-center md:justify-end">
-            <div className="border-gradient-l-purple-blue-purple gradient-border-2 flex gap-3 rounded-xl px-4 md:px-6 py-3 md:py-[15px] text-gray-100">
-              {/* <a
-                className="text-lg md:text-xl font-bold leading-[20px] md:leading-[23px] text-gray-100"
-                title="Click to see all projects"
-                href="/launchpad"
-              >
-                See all projects
-              </a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-arrow-right"
-              >
-                <path d="M5 12h14"></path>
-                <path d="m12 5 7 7-7 7"></path>
-              </svg> */}
-            </div>
-          </div>
+
         </AnimatedDiv>
 
         <AnimatedDiv className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 w-full">
@@ -92,10 +68,16 @@ export default function ProjectsSection() {
               </div>
             </div>
             <div className="mt-4">
-              <button className="w-full flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 py-2 md:py-3 font-bold text-white transition duration-300 hover:opacity-90 text-sm md:text-base">
+              <Link
+                href="https://forms.fillout.com/t/skbMAxUX2bus"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 py-2 md:py-3 font-bold text-white transition duration-300 hover:opacity-90 text-sm md:text-base"
+              >
                 <svg
-                  className="w-4 h-4 md:w-5 md:h-5"
+                  className="w-4 h-4 md:w-6 md:h-6"
                   fill="none"
+                  stroke="currentColor"
                   strokeWidth="2"
                   viewBox="0 0 24 24"
                 >
@@ -106,7 +88,7 @@ export default function ProjectsSection() {
                   />
                 </svg>
                 Apply Now
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -157,10 +139,16 @@ export default function ProjectsSection() {
               </div>
             </div>
             <div className="mt-4">
-              <button className="w-full flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 py-2 md:py-3 font-bold text-white transition duration-300 hover:opacity-90 text-sm md:text-base">
+              <Link
+                href="https://forms.fillout.com/t/skbMAxUX2bus"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 py-2 md:py-3 font-bold text-white transition duration-300 hover:opacity-90 text-sm md:text-base"
+              >
                 <svg
                   className="w-4 h-4 md:w-5 md:h-5"
                   fill="none"
+                  stroke="currentColor"
                   strokeWidth="2"
                   viewBox="0 0 24 24"
                 >
@@ -171,7 +159,7 @@ export default function ProjectsSection() {
                   />
                 </svg>
                 Apply Now
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -222,10 +210,16 @@ export default function ProjectsSection() {
               </div>
             </div>
             <div className="mt-4">
-              <button className="w-full flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 py-2 md:py-3 font-bold text-white transition duration-300 hover:opacity-90 text-sm md:text-base">
+              <Link
+                href="https://forms.fillout.com/t/skbMAxUX2bus"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 py-2 md:py-3 font-bold text-white transition duration-300 hover:opacity-90 text-sm md:text-base"
+              >
                 <svg
                   className="w-4 h-4 md:w-5 md:h-5"
                   fill="none"
+                  stroke="currentColor"
                   strokeWidth="2"
                   viewBox="0 0 24 24"
                 >
@@ -236,7 +230,7 @@ export default function ProjectsSection() {
                   />
                 </svg>
                 Apply Now
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -287,10 +281,16 @@ export default function ProjectsSection() {
               </div>
             </div>
             <div className="mt-4">
-              <button className="w-full flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 py-2 md:py-3 font-bold text-white transition duration-300 hover:opacity-90 text-sm md:text-base">
+              <Link
+                href="https://forms.fillout.com/t/skbMAxUX2bus"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 py-2 md:py-3 font-bold text-white transition duration-300 hover:opacity-90 text-sm md:text-base"
+              >
                 <svg
                   className="w-4 h-4 md:w-5 md:h-5"
                   fill="none"
+                  stroke="currentColor"
                   strokeWidth="2"
                   viewBox="0 0 24 24"
                 >
@@ -301,7 +301,7 @@ export default function ProjectsSection() {
                   />
                 </svg>
                 Apply Now
-              </button>
+              </Link>
             </div>
           </div>
         </AnimatedDiv>

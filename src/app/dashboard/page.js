@@ -4,6 +4,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { ethers } from "ethers";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 
 import Link from "next/link";
 import MyBalances from "../components/dashboardComps/myBalances";
@@ -25,6 +26,7 @@ const StakeIcon = () => <FaCoins className="w-4 h-4" />
 const KYCIcon = () => <MdVerifiedUser className="w-4 h-4" />
 
 export default function DashboardPage() {
+  const searchParams = useSearchParams();
   const [moreMenuOpen, setMoreMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("overview"); // <── controls tab view
 
@@ -54,6 +56,14 @@ export default function DashboardPage() {
       };
     }
   }, []);
+
+  // Set active tab based on URL parameter
+  useEffect(() => {
+    const tab = searchParams.get('tab');
+    if (tab && ['overview', 'kyc', 'stake'].includes(tab)) {
+      setActiveTab(tab);
+    }
+  }, [searchParams]);
 
   const connectWallet = useCallback(async () => {
     setError(null);
@@ -156,10 +166,16 @@ export default function DashboardPage() {
                         Documentation
                       </Link>
                       <Link
-                        href="/support"
+                        href="/twitter"
                         className="block px-4 py-2 text-sm text-white hover:bg-white/5"
                       >
-                        Support
+                        Twitter
+                      </Link>
+                      <Link
+                        href="/twitter"
+                        className="block px-4 py-2 text-sm text-white hover:bg-white/5"
+                      >
+                        Telegram
                       </Link>
                     </div>
                   )}
