@@ -33,20 +33,15 @@ export default function FeaturesSection() {
                 A New Era for
               </h3>
               <h2 className="mt-[3px] text-left text-[28px] font-bold leading-[32px] text-gray-100 sm:text-[32px] sm:leading-[37px] md:text-[48px] md:leading-[64px]">
-                Fair and Aligned Token Launches
+                Modular launch and liquidity solutions
               </h2>
 
               <div className="mt-4 md:mt-6">
                 <p className="font-inter text-left text-sm font-normal leading-5 text-gray-200 md:max-w-[812px] md:text-[18px] md:leading-[28px]">
-                  Cryptos early promise was clear: to empower innovation and break
-                  down access barriers for all—a free, fair, and open financial
-                  system. In recent times the industry has shifted to benefit
-                  short-term value extraction by a new &quot;elite&quot;.
+                  Tokens enable platforms to unlock new opportunities, including enhanced decentralization, liquidity bootstrapping, community growth, the creation of financial primitives, and overcoming the cold-start
                 </p>
                 <p className="font-inter mt-3 text-left text-sm font-normal leading-5 text-gray-200 md:mt-6 md:max-w-[812px] md:text-[18px] md:leading-[28px]">
-                  Eclipse Fi is reigniting that original vision, pioneering a
-                  community-driven launch and DeFi hub that connects passionate
-                  builders with dedicated communities.
+                  A token launch is a fundraising method that allows blockchain projects to distribute their native tokens or digital assets to investors and the public.
                 </p>
               </div>
             </AnimatedDiv>

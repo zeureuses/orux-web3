@@ -32,7 +32,7 @@ export default function Navbar() {
                 <div className="-ml-4 h-6 w-6 rounded-full bg-green-500" />
               </div>
               <div className="pr-2 font-inter text-sm text-[#FBF8FA]">
-                300k+ members
+                Worldwide Users
               </div>
             </div>
           </div>

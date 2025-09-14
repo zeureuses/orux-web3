@@ -48,30 +48,22 @@ export default function Home() {
                 </h3>
                 <h2 className="mb-[6px] text-[22px] font-bold leading-[28px] text-gray-100 md:mb-[26px] md:text-[72px] md:leading-[76px]">
                   <div className="bg-[linear-gradient(to_right,#930606_-5.86%,#b18779_20.49%,#906bf5_46.84%,#da8461_73.19%,#c34ddc_99.55%)] bg-clip-text text-transparent inline">
-                    Cosmos
+                    Layer 2s
                   </div>
-                  <span className="font-medium"> and</span>
+                  {/* <span className="font-medium"> and</span>
                   <br className="hidden md:block" />
                   <div className="pl-2 md:pl-0 bg-[linear-gradient(to_right,#930606_-5.86%,#b18779_20.49%,#906bf5_46.84%,#da8461_73.19%,#c34ddc_99.55%)] bg-clip-text text-transparent inline">
                     Layer 2s
-                  </div>
+                  </div> */}
                 </h2>
               </div>
 
               <div className="">
                 <p className="font-inter pr-3 text-[12px] leading-[18px] text-gray-200 md:text-[18px] md:leading-[26px] mt-[8px] md:mt-6">
-                  For the upcoming cycle, streamlining the user experience is
-                  paramount for the next wave of adoption. Eclipse Fi is working
-                  with partners to radically transform the cross-chain user
-                  experience, leveraging account abstraction to create an
-                  intuitive &quot;onboard your grandma&quot; level experience.
+                  For the upcoming cycle, streamlining the user experience is paramount for driving the next wave of adoption. Orux AI is working with partners to radically transform the cross-chain experience, leveraging account abstraction to deliver an intuitive, seamless onboarding process.
                 </p>
                 <p className="font-inter pr-3 text-[12px] leading-[18px] text-gray-200 md:text-[18px] md:leading-[26px] mt-[8px] md:mt-6">
-                  Eclipse Fi is committed to deep ecosystem building and has
-                  selected to focus on the Cosmos ecosystem with a homebase on
-                  Neutron blockchain, as well as emerging layer-2s like Mantle,
-                  Linea and Base. These ecosystems hold immense potential for
-                  robust foundations and collaborative ecosystem growth.
+                  Orux AI is committed to deep ecosystem building and has chosen to focus on emerging Layer-2 ecosystems such as Mantle, Linea, and Base. These networks hold immense potential to provide strong foundations for growth and foster collaborative innovation across the L2 landscape.
                 </p>
               </div>
             </AnimatedDiv>

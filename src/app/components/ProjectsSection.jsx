@@ -10,16 +10,15 @@ export default function ProjectsSection() {
         <AnimatedDiv className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex flex-col max-w-[600px]">
             <h1 className="text-[20px] text-center md:text-left md:text-[24px] lg:text-[36px] font-bold leading-[24px] md:leading-[26px] lg:leading-[44px] text-gray-100">
-              Upcoming projects
+              Your projects
             </h1>
             <p className="mt-[8px] font-inter text-center md:text-left text-sm md:text-base font-normal leading-normal text-gray-100/[0.7]">
-              Discover our selection of highly vetted live and upcoming
-              projects, and participate in the next big launches
+              Launch your project on our platforms and benefit from our solutions
             </p>
           </div>
           <div className="flex items-center justify-center md:justify-end">
             <div className="border-gradient-l-purple-blue-purple gradient-border-2 flex gap-3 rounded-xl px-4 md:px-6 py-3 md:py-[15px] text-gray-100">
-              <a
+              {/* <a
                 className="text-lg md:text-xl font-bold leading-[20px] md:leading-[23px] text-gray-100"
                 title="Click to see all projects"
                 href="/launchpad"
@@ -40,7 +39,7 @@ export default function ProjectsSection() {
               >
                 <path d="M5 12h14"></path>
                 <path d="m12 5 7 7-7 7"></path>
-              </svg>
+              </svg> */}
             </div>
           </div>
         </AnimatedDiv>
@@ -75,7 +74,7 @@ export default function ProjectsSection() {
               </div>
             </div>
             <div className="mt-4 flex flex-col gap-1">
-              <h3 className="text-base md:text-lg font-bold">Kii Chain</h3>
+              <h3 className="text-base md:text-lg font-bold">Sample Project</h3>
               <p className="text-xs md:text-sm text-gray-300">
                 The Blockchain for emerging markets...
               </p>
@@ -106,7 +105,7 @@ export default function ProjectsSection() {
                     d="M8 16l4-4-4-4m5 8V8"
                   />
                 </svg>
-                Project Details
+                Apply Now
               </button>
             </div>
           </div>
@@ -140,7 +139,7 @@ export default function ProjectsSection() {
               </div>
             </div>
             <div className="mt-4 flex flex-col gap-1">
-              <h3 className="text-base md:text-lg font-bold">Kii Chain</h3>
+              <h3 className="text-base md:text-lg font-bold">Sample Project</h3>
               <p className="text-xs md:text-sm text-gray-300">
                 The Blockchain for emerging markets...
               </p>
@@ -171,7 +170,7 @@ export default function ProjectsSection() {
                     d="M8 16l4-4-4-4m5 8V8"
                   />
                 </svg>
-                Project Details
+                Apply Now
               </button>
             </div>
           </div>
@@ -205,7 +204,7 @@ export default function ProjectsSection() {
               </div>
             </div>
             <div className="mt-4 flex flex-col gap-1">
-              <h3 className="text-base md:text-lg font-bold">Kii Chain</h3>
+              <h3 className="text-base md:text-lg font-bold">Sample Project</h3>
               <p className="text-xs md:text-sm text-gray-300">
                 The Blockchain for emerging markets...
               </p>
@@ -236,7 +235,7 @@ export default function ProjectsSection() {
                     d="M8 16l4-4-4-4m5 8V8"
                   />
                 </svg>
-                Project Details
+                Apply Now
               </button>
             </div>
           </div>
@@ -270,7 +269,7 @@ export default function ProjectsSection() {
               </div>
             </div>
             <div className="mt-4 flex flex-col gap-1">
-              <h3 className="text-base md:text-lg font-bold">Kii Chain</h3>
+              <h3 className="text-base md:text-lg font-bold">Sample Project</h3>
               <p className="text-xs md:text-sm text-gray-300">
                 The Blockchain for emerging markets...
               </p>
@@ -301,7 +300,7 @@ export default function ProjectsSection() {
                     d="M8 16l4-4-4-4m5 8V8"
                   />
                 </svg>
-                Project Details
+                Apply Now
               </button>
             </div>
           </div>

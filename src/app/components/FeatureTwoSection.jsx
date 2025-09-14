@@ -3,9 +3,9 @@ import AnimatedDiv from "./AnimatedDiv";
 
 const features = [
   {
-    title: "Modular Token Launches and Flexible Launch Tracks",
+    title: "Comprehensive modular solution",
     description:
-      "Our modular approach to token launches gives projects the flexibility to choose what fits best, whether it's a liquidity pool launch or another custom path. Eclipse Fi provides the tools to ensure a successful, long-term launch that aligns with both project and community outcomes.",
+      "A full suite for token and liquidity needs, enabling projects to control the entire launch process with tailored tools and innovative mechanisms designed for their unique requirements.",
     svg: (
       <svg
         width="56"
@@ -25,9 +25,9 @@ const features = [
     ),
   },
   {
-    title: "Scalable Infrastructure for Decentralized Projects",
+    title: "Strong resources & partnerships",
     description:
-      "We provide a robust and scalable infrastructure to support decentralized applications, ensuring that your project grows without limitations.",
+      "Access to cross-ecosystem collaborations, network introductions, advisory services, PR & branding support, and more.",
     svg: (
       <svg
         width="56"
@@ -51,9 +51,9 @@ const features = [
     ),
   },
   {
-    title: "Advanced Analytics and Reporting",
+    title: "Advanced functionalities",
     description:
-      "Our platform offers comprehensive analytics and reporting tools, allowing projects to monitor and optimize their token launch performance with ease.",
+      "Features such as account abstraction for seamless UX, anonymous KYC powered by zero-knowledge proofs, diverse launch options, built-in reputational scoring, and beyond.",
     svg: (
       <svg
         width="56"
@@ -95,9 +95,9 @@ const features = [
     ),
   },
   {
-    title: "Customizable Tokenomics",
+    title: "Long-term success",
     description:
-      "Eclipse Fi enables you to design and implement custom tokenomics models, offering you the flexibility to align with your project's goals.",
+      "A robust support pipeline for carefully vetted, high-quality projects, connecting them with long-term, thoughtfully incentivized community members.",
     svg: (
       <svg
         width="56"

@@ -47,12 +47,10 @@ export default function HeroSection() {
 
       <AnimatedDiv className="z-10 text-center">
         <h1 className="text-[33px] font-bold leading-[42px] text-gray-100 md:mt-5 md:text-[64px] md:leading-[80px]">
-          DeFi <br /> the Status Quo
+          OruxAI <br /> Pioneering the Future
         </h1>
-        <p className="mx-auto mt-3 max-w-[480px] px-[45px] text-center font-inter text-sm font-normal leading-5 text-gray-200 md:mt-4 md:px-0 md:text-[18px] md:leading-[28px]">
-          We’re dismantling predatory systems to build a launch and DeFi hub for
-          sustainable growth—aligning and empowering communities and innovative
-          builders to thrive together.
+        <p className="mx-auto mt-3 max-w-[640px] px-[45px] text-center font-inter text-sm font-normal leading-5 text-gray-200 md:mt-4 md:px-0 md:text-[18px] md:leading-[28px]">
+          We are a modular, multi-chain launch protocol building a pioneering toolkit that aligns long-term users with projects. By leveraging smart accounts and cross-chain architecture, we make onboarding and cross-chain launches seamless and intuitive.
         </p>
 
         <div className="mt-10 flex justify-center md:mt-12">
@@ -84,7 +82,7 @@ export default function HeroSection() {
                         md:rounded-xl md:px-6 md:py-[14px] md:text-[18px]
                         md:leading-[24px]"
             >
-              Get ECLIP
+              Get ORUX
             </button>
           </a>
         </div>

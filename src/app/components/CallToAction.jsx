@@ -8,11 +8,10 @@ export default function CTAsection() {
         <div className="flex h-full flex-col items-center justify-center">
           <div className="mx-auto mb-[6px] max-w-[240px] text-center font-sans text-[16px] font-bold leading-[24px] text-gray-100 md:mb-3 md:max-w-[700px] md:text-[36px] md:leading-[42px]">
             Are you ready
-            <br /> for your launch on Eclipse FI?
+            <br /> for your launch on Orux AI?
           </div>
           <div className="mb-5 max-w-[255px] text-center font-inter text-[12px] leading-[18px] text-gray-200 md:mb-10 md:max-w-[650px] md:text-[18px] md:leading-8">
-            Apply to launch your project and token through the Eclipse Fi
-            protocol or submit an early expression of interest.
+            Submit your project and token for launch through theOrux AI protocol, or share an early expression of interest today.
           </div>
           <a
             target="_blank"
