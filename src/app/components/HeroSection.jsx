@@ -68,7 +68,7 @@ export default function HeroSection() {
           </Link>
 
           <Link
-            href="https://oruxai.gitbook.io/documentation"
+            href="https://docs.oruxai.com/"
             target="_blank"
             rel="noopener noreferrer"
             title="Click to read more"

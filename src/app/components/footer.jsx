@@ -5,27 +5,27 @@ export default function Footer() {
   const resourceLinks = [
     {
       title: "Ambassador Program",
-      href: "https://oruxai.gitbook.io/documentation/general-information/ambassador-program"
+      href: "https://docs.oruxai.com/general-information/ambassador-program"
     },
     {
       title: "Key Risks", 
-      href: "https://oruxai.gitbook.io/documentation/general-information/key-risks"
+      href: "https://docs.oruxai.com/general-information/key-risks"
     },
     {
       title: "IDO Mechanics",
-      href: "https://oruxai.gitbook.io/documentation/oruxai-mechanics/ido-mechanics"
+      href: "https://docs.oruxai.com/oruxai-mechanics/ido-mechanics"
     },
     {
       title: "Staking",
-      href: "https://oruxai.gitbook.io/documentation/tokenomics-and-rewards/usdorux-token/staking"
+      href: "https://docs.oruxai.com/tokenomics-and-rewards/usdorux-token/staking"
     },
     {
       title: "FAQ",
-      href: "https://oruxai.gitbook.io/documentation/tokenomics-and-rewards/faq"
+      href: "https://docs.oruxai.com/tokenomics-and-rewards/faq"
     },
     {
       title: "Docs",
-      href: "https://oruxai.gitbook.io/documentation"
+      href: "https://docs.oruxai.com/"
     }
   ];
 

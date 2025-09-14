@@ -10,7 +10,7 @@ export default function TierVotingCard() {
             <a
               className="gradient-link flex items-center gap-1 text-h12 font-bold"
               title="Click to Stake now"
-              href="https://oruxai.gitbook.io/documentation/tokenomics-and-rewards/usdorux-token/staking"
+              href="https://docs.oruxai.com/tokenomics-and-rewards/usdorux-token/staking"
             >
               Click to Stake Now
               <svg

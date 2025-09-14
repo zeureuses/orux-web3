@@ -90,7 +90,7 @@ const CosmicTierSystem = () => {
               <div className="absolute top-9 text-sm font-semibold text-white/90">
                 Tier
                 <a 
-                  href="https://oruxai.gitbook.io/documentation/oruxai-mechanics/opulse-and-user-tiers" 
+                  href="https://docs.oruxai.com/oruxai-mechanics/opulse-and-user-tiers" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="flex items-center gap-1 mt-4 text-xs font-medium text-white/90 hover:text-purple-400 transition-colors"

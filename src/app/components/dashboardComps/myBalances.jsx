@@ -46,7 +46,7 @@ export default function MyBalances() {
                   title="Click to get ORUX"
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://oruxai.gitbook.io/documentation/tokenomics-and-rewards/usdorux-token/staking"
+                  href="https://docs.oruxai.com/tokenomics-and-rewards/usdorux-token/staking"
                 >
                   Get ORUX
                   {/* arrow svg */}

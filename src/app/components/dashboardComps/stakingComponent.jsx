@@ -162,7 +162,7 @@ const StakingComponent = () => {
                       I have read all{' '}
                       <a
                         className="inline cursor-pointer font-semibold underline hover:text-purple-400 transition-colors"
-                        href="https://oruxai.gitbook.io/documentation/tokenomics-and-rewards/usdorux-token/staking"
+                        href="https://docs.oruxai.com/tokenomics-and-rewards/usdorux-token/staking"
                         target="_blank"
                         rel="noreferrer"
                       >
